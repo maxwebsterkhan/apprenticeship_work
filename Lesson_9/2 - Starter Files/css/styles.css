@@ -134,7 +134,18 @@ header nav ul li#logo a:hover {
 
 /* The Whole Story */
 
-
+#story-excerpt {
+    width: 530px;
+    margin-right: 24px;
+    float: left;
+    font-size: 16px;
+}
+#best-donut {
+    background: url('../images/award.png') left center no-repeat;
+    padding: 30px 0 30px 130px;
+    float: left;
+    width: 240px;
+}
 
 /* News & Events */
 
