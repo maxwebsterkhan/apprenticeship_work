@@ -122,6 +122,9 @@ header nav ul li#logo a:hover {
 #hero {
     background: #e8c04f url('../images/bg-tile-yellow.gif') top left repeat;
 }
+#hero .container{
+    position: relative;
+}
 #hero .large-ribbon {
     height: 190px;
     width: 150px;
