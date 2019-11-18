@@ -6,7 +6,7 @@
    ---------------
    Light Cream:		#f2f3ee
    Orange:			#d17f38
-   Yellow:			#e8c04f
+   Yellow:			# 
    Brown:			#4b2707
    =============================== */
 
@@ -119,7 +119,18 @@ header nav ul li#logo a:hover {
 
 /* Hero */
 
-
+#hero {
+    background: #e8c04f url('../images/bg-tile-yellow.gif') top left repeat;
+}
+#hero .large-ribbon {
+    height: 190px;
+    width: 150px;
+    background: url('../images/fresh-whole-ingredients.png') top left no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top: -23px;
+    right: -30px;
+}
 
 /* The Whole Story */
 
