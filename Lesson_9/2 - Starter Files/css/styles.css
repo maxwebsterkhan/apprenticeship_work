@@ -202,8 +202,8 @@ footer.main a:hover {
 }
 #credits {
     background: url('../images/icon-apple.png') center left no-repeat;
-margin-top: 9px;
-float: right;
+    float: right;
+    margin-top: 9px;
 }
 
 /* Force Elements to Self Clear its Children: http://css-tricks.com/snippets/css/clear-fix/ */
