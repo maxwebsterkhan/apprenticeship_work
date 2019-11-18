@@ -184,7 +184,27 @@ header nav ul li#logo a:hover {
 
 /* Footer */
 
-
+footer.main {
+    background: #4b2707 url('../images/bg-tile-brown.gif') top left repeat;
+    color: #f2f3ee;
+    padding: 30px 0;
+}
+footer.main a:hover {
+    color: #f2f3ee;
+}
+#uncopyright, #credits {
+    width: 240px;
+    float: left;
+    padding: 10px 0 10px 50px;
+}
+#uncopyright {
+    background: url('../images/icon-recycle.png') center left no-repeat;
+}
+#credits {
+    background: url('../images/icon-apple.png') center left no-repeat;
+margin-top: 9px;
+float: right;
+}
 
 /* Force Elements to Self Clear its Children: http://css-tricks.com/snippets/css/clear-fix/ */
 
