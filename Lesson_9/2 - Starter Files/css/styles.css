@@ -149,7 +149,35 @@ header nav ul li#logo a:hover {
 
 /* News & Events */
 
-
+#articles {
+    width: 370px;
+    float: left;
+    margin-right: 24px;
+}
+#feature-image {
+    width: 530px;
+    float: left;
+}
+#news-events article {
+    margin: 20px 0;
+    padding-left: 55px;
+}
+#news-events article.news {
+    background: url('../images/icon-news.png') top left no-repeat;
+}
+#news-events article.event {
+    background: url('../images/icon-calendar.png') top left no-repeat;
+}
+#news-events header time {
+    color: #d17f38;
+    font-size: 12px;
+}
+#news-events section.excerpt {
+    margin: 10px 0;
+}
+#news-events footer {
+    font-size: 12px;
+}
 
 /* Footer */
 
