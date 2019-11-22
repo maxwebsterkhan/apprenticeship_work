@@ -72,6 +72,7 @@ body {
   background-image: linear-gradient(to right, #55c57a, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s; }
@@ -204,6 +205,8 @@ body {
     background-image: linear-gradient(to right, #55c57a, #28b485);
     display: inline-block;
     -webkit-background-clip: text;
+    background-clip: text;
+    background: text;
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1.5em) scale(1.03); }
