@@ -3,6 +3,7 @@
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
+
   &--main {
     display: block;
     font-size: 6rem;
@@ -10,6 +11,7 @@
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
   }
+
   &--sub {
     display: block;
     font-size: 2rem;
@@ -32,11 +34,9 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primary-dark
-  );
+  background-image: linear-gradient(to right,
+      $color-primary-light,
+      $color-primary-dark);
   display: inline-block;
   -webkit-background-clip: text;
   background-clip: text;
@@ -55,6 +55,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .paragraph {
   font-size: $default-font-size;
 
