@@ -56,9 +56,28 @@
         </div>
         <div class="col-1-of-2">
           <div class="composition">
+
+            <img srcset="img/nat-1.jpg 300w, img/nat-1-large 1000w"
+            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5empx) 30vw, 300px" 
+            alt="photo 1"
+            class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
+
+
+            <img srcset="img/nat-2.jpg 300w, img/nat-2-large 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              alt="photo 2"
+              class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
+
+
+              <img srcset="img/nat-3.jpg 300w, img/nat-3-large 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="photo 3"
+                class="composition__photo composition__photo--p3" src="img/nat-3large.jpg">
+<!--
             <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
             <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
+-->
           </div>
         </div>
       </div>
@@ -267,24 +286,26 @@
   </main>
   <footer class="footer">
     <div class="footer__logo-box">
-      <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
-    </div>
-    <div class="row">
-      <div class="col-1-or-2">
-        <div class="footer__navigation">
-          <ul class="footer__list">
-            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Privary policy</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-          </ul>
+      <picture class="footer__logo">
+        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+      </picture>
+        </div> <div class="row">
+        <div class="col-1-or-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Privary policy</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="col-1-of-2">
-        <p class="footer__copyright"> Built by <a href="#" class="footer__link">Max Webster-Khan</a> for the online course <a href="#" class="footer__link"> Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both peronal and commercial use,
-          but NOT to claim it for your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated! </p>
-      </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright"> Built by <a href="#" class="footer__link">Max Webster-Khan</a> for the online course <a href="#" class="footer__link"> Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both peronal and commercial
+            use, but NOT to claim it for your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated! </p>
+        </div>
     </div>
   </footer>
   <div class="popup" id="popup">
@@ -300,8 +321,7 @@
         <p class="popup__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac orci phasellus egestas tellus rutrum. Egestas diam in arcu cursus euismod quis. Adipiscing at in tellus integer feugiat scelerisque.
           Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Aliquet lectus proin nibh nisl condimentum id venenatis. Ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Leo vel orci porta non pulvinar neque laoreet. Risus quis varius quam quisque.
           Mattis nunc sed blandit libero volutpat sed cras ornare. Neque laoreet suspendisse interdum consectetur libero. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. Viverra mauris in aliquam sem. Viverra adipiscing at in tellus integer. Cursus euismod quis viverra nibh cras
-          pulvinar mattis nunc sed. Mattis vulputate enim nulla aliquet porttitor lacus luctus. Nulla facilisi etiam dignissim diam quis enim. Sed risus pretium quam vulputate dignissim suspendisse in. 
-        </p>
+          pulvinar mattis nunc sed. Mattis vulputate enim nulla aliquet porttitor lacus luctus. Nulla facilisi etiam dignissim diam quis enim. Sed risus pretium quam vulputate dignissim suspendisse in. </p>
         <a href="#" class="btn btn--green">Book now</a>
       </div>
     </div>
