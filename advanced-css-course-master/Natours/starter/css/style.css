@@ -752,8 +752,7 @@ body {
     padding-top: 2rem;
     display: inline-block;
     padding-left: 2rem;
-    width: 80%;
-    float: right; }
+    width: 80%; }
     @media (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;

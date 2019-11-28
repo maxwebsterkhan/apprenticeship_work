@@ -32,7 +32,7 @@
         display: inline-block;
     padding-left: 2rem;
     width: 80%;
-    float: right;
+    
 
         @include respond(tab-port) {
             width: 100%;
