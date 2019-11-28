@@ -10,7 +10,6 @@
     visibility: hidden;
     transition: all .3s;
 
-
     &__content {
         @include absCenter;
 
@@ -28,6 +27,12 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
+        line-height: 0;
+
+        @include respond(popup-break) {
+            display: none;
+        }
+        
     }
 
     &__right {
@@ -40,6 +45,7 @@
     &__img {
         display: block;
         width: 100%;
+        object-fit: fill;
     }
 
     &__text {

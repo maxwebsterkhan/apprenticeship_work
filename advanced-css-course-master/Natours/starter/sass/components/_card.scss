@@ -25,27 +25,21 @@
       transform: rotateY(180deg);
 
       &-1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark);
       }
 
       &-2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light,
-          $color-primary-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-primary-light,
+            $color-primary-dark);
       }
 
       &-3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        );
+        background-image: linear-gradient(to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark);
       }
     }
   }
@@ -69,30 +63,27 @@
     border-top-right-radius: 3px;
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-secondary-light,
-          $color-secondary-dark
-        ),
+          $color-secondary-dark),
         url(../img/nat-5.jpg);
     }
+
     &--2 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-primary-light,
-          $color-primary-dark
-        ),
+          $color-primary-dark),
         url(../img/nat-6.jpg);
     }
+
     &--3 {
-      background-image: linear-gradient(
-          to right bottom,
+      background-image: linear-gradient(to right bottom,
           $color-tertiary-light,
-          $color-tertiary-dark
-        ),
+          $color-tertiary-dark),
         url(../img/nat-7.jpg);
     }
   }
+
   &__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -111,38 +102,37 @@
     box-decoration-break: clone;
 
     &--1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-secondary-light, 0.85),
-        rgba($color-secondary-dark, 0.85)
-      );
+      background-image: linear-gradient(to right bottom,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary-dark, 0.85));
     }
+
     &--2 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.85),
-        rgba($color-primary-dark, 0.85)
-      );
+      background-image: linear-gradient(to right bottom,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary-dark, 0.85));
     }
+
     &--3 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-tertiary-light, 0.85),
-        rgba($color-tertiary-dark, 0.85)
-      );
+      background-image: linear-gradient(to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 0.85));
     }
   }
 
   &__details {
     padding: 3rex;
+
     ul {
       list-style: none;
       width: 80%;
       margin: 0 auto;
+
       li {
         text-align: center;
         font-size: 1.5rem;
         padding: 1rem;
+
         &:not(:last-child) {
           border-bottom: 1px solid $color-grey-light-2;
         }
@@ -169,8 +159,64 @@
     font-size: 1.4rem;
     text-transform: uppercase;
   }
+
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+
+      &--front {
+        background-color: $color-white;
+      }
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      text-align: center;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+
+      margin-bottom: 3rem;
+
+    }
+
+    &__price-value {
+      font-size: 4rem;
+
+    }
   }
 }
