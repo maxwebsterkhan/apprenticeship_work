@@ -18,14 +18,19 @@
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
+  margin-bottom: 10rem;
 
   &>* {
-    transform: skewY(7deg);
+    transform: skewY(6deg);
   }
 
   @include respond(tab-port) {
     padding: 10rem 0;
+    transform: skewY(-6deg);
+    
   }
+
+
 }
 
 .section-tours {
