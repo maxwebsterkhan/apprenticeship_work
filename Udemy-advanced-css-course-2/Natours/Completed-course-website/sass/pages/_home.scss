@@ -16,12 +16,12 @@
       rgba($color-primary-dark, 0.8)),
     url(../img/nat-4.jpg);
   background-size: cover;
-  transform: skewY(-7deg);
+  transform: skewY(-4deg);
   margin-top: -10rem;
   margin-bottom: 10rem;
 
   &>* {
-    transform: skewY(6deg);
+    transform: skewY(4deg);
   }
 
   @include respond(tab-port) {
