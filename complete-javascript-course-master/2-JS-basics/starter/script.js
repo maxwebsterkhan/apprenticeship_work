@@ -29,6 +29,7 @@ var if = 23;
  * Variable Type & Coercion.
  */
 
+/*
 var firstName = "John";
 age = 28;
 
@@ -52,3 +53,16 @@ alert(firstName + " is a " + age + " year old " + job + ". is he Married? " + is
 
 var lastName = prompt("what is his last name?");
 console.log(firstName + " " + lastName);
+*/
+
+/***********************************************
+ * Basic Operators.
+ */
+var year, yearJohn, yearMark;
+year = 2020;
+yearJohn = year - 28;
+yearMark = year - ww;
+
+var yearJohn = 2018 - 28;
+
+var yearMark = 2018 - 33;
