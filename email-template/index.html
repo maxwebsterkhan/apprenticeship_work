@@ -23,84 +23,143 @@
       text-decoration: none;
     }
 
-    /* These are our tablet/medium screen media queries */
-    @media screen and (max-width: 600px) {
 
-
-      /* Display block allows us to stack elementƒs */
-      *[class="mobile-column"] {
-        display: block;
-      }
-
-      /* Some more stacking elements */
-      *[class="mob-column"] {
-        float: none !important;
+    /* change px to percentage for mobile */
+    @media screen and (max-width:600px) {
+      .container-table {
         width: 100% !important;
       }
+    }
 
-      /* Hide stuff */
-      *[class="hide"] {
+    @media screen and (max-width:600px) {
+      .container-td {
+        width: 100% !important;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .email-image {
+        width: 100% !important;
+      }
+    }
+
+
+    .visible-mobile {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .visible-mobile {
+        display: inline !important;
+
+
+      }
+
+      .hidden-mobile {
         display: none !important;
       }
+    }
 
-      /* This sets elements to 100% width and fixes the height issues too, a god send */
-      *[class="100p"] {
+
+    .visible-mobile-hero {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .visible-mobile-hero {
+        display: inline !important;
+
+
+      }
+
+      .hidden-mobile-hero {
+        display: none !important;
+      }
+    }
+
+    *[class="100p"] {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      .larger-font {
+        font-size: 14px !important;
+      }
+    }
+
+
+    .mobileHide {
+      display: none !important;
+    }
+
+    .deviceWidth {
+      width: 100% !important;
+      height: auto;
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 599px) {
+      #templateColumns {
         width: 100% !important;
-        height: auto !important;
       }
 
-      /* For the 2x2 stack */
-      *[class="condensed"] {
-        padding-bottom: 40px !important;
-        display: block;
-      }
-
-      /* Centers content on mobile */
-      *[class="center"] {
-        text-align: center !important;
+      .templateColumnContainer {
+        display: block !important;
         width: 100% !important;
-        height: auto !important;
       }
 
+      .columnImage {
+        height: auto !important;
+        max-width: 480px !important;
+        width: 100% !important;
+      }
 
+      .leftColumnContent {
+        font-size: 16px !important;
+        line-height: 125% !important;
+      }
+
+      .rightColumnContent {
+        font-size: 16px !important;
+        line-height: 125% !important;
+      }
     }
   </style>
+
+
 </head>
 
 <body style="padding:0; margin:0">
   <table border="0" cellpadding="0" cellspacing="0"
-    style="margin: 0; padding: 0" width="100%">
+    style="margin: 0; padding: 0" width="100%" class="container-table">
     <tr>
-      <td align="center" valign="top">
-
-
-
+      <td align="center" valign="top" class="container-td">
 
         <table border="0" cellspacing="0" cellpadding="0" width="600"
-          class="100p">
+          class="container-table">
           <tr>
-            <td bgcolor="#262626" width="600" valign="top" class="100p">
+            <td>
+            <td class="container-td" bgcolor="#262626" width="100%"
+              valign="top">
               <!--[if gte mso 9]>
-                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;">
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
                             <v:fill type="tile" src="images/header-bg.jpg" color="#3b464e" />
                             <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
                                 <![endif]-->
-
-
               <table border="0" cellspacing="0" cellpadding="0" width="600"
-                class="100p">
+                class="container-table" style="padding-right: 28px;">
                 <tr>
-                  <td height="12"></td>
+                  <td height="12" class="container-td"></td>
                 </tr>
                 <tr>
-                  <td width="50%" class="hide" align="left"
+                  <td width="50%" align="left" class="container-td"
                     style="font-size:12px; color:#FFFFFF;">
                     <a href="http://bmw.co.uk"
                       style="color:#FFFFFF; text-decoration:none; font-weight: 100; font-family: Helvetica, Arial, sans-serif;">&nbsp;
-                      &nbsp;
                       &nbsp;&nbsp;&nbsp; Discover BMW &gt;</a>
-
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp;
                     <a href="http://bmw.co.uk"
                       style="color:#FFFFFF; text-decoration:none; font-weight: 100; font-family: Helvetica, Arial, sans-serif;">Explore
                       the
@@ -108,43 +167,48 @@
                       &gt;</a>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                   </td>
-                </tr>
-
-              </table>
-
-              <table border="0" cellspacing="0" cellpadding="0" width="600"
-                class="100p">
-
-                <tr>
-                  <td align="left" style="color:#FFFFFF; ">
-
-                    <span
-                      style="font-size:40px; font-weight: 100; font-family: Helvetica, Arial, sans-serif;">
-                      &nbsp;&nbsp;&nbsp;THE
-                      X6.</span>
-
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   </td>
-                  <td align="right" style="padding-right: 28px">
-                    <img src="/images/BMW_Logo_2016_RGB.png" alt="BMW logo"
-                      height="110" />
-
+                </tr>
+              </table>
+              <table border="0" cellspacing="0" cellpadding="0" width="600"
+                class="container-table" style="padding-right: 28px;">
+                <tr>
+                  <td align="left"
+                    style="color:#FFFFFF; padding-left: 20px; padding-right: 20px;"
+                    class="
+                    container-td">
+                    <span
+                      style="font-size:40px; font-weight: 100; white-space: nowrap; overflow: hidden; font-family: Helvetica, Arial, sans-serif;">
+                      THE
+                      X6.</span>
+                  </td>
+                  <td align="right" width="100%" class="container-td">
+                    <img src="/images/BMW_Logo_2016_RGB-mobile.png"
+                      alt="BMW Logo" class="visible-mobile" height="111px"
+                      width="99px" />
+                    <img src="/images/BMW_Logo_2016_RGB.png" alt="BMW Logo"
+                      class="hidden-mobile" height="88px" width="80px" />
                   </td>
                 </tr>
                 <tr>
                   <td height="28"></td>
                 </tr>
               </table>
-              <table border="0" cellspacing="0" cellpadding="0" width="600">
+              <table border="0" cellspacing="0" cellpadding="0" width="600"
+                class="container-table">
                 <tr>
                   <td>
-                    <img src="images/GENERIC_DESKTOP_HERO.jpg"
-                      alt="Large BMW car" width="600" />
+                    <img src="/images/GENERIC_MOBILE_HERO.jpg" alt="BMW Car"
+                      class="visible-mobile-hero" width="100%" />
+                    <img src="/images/GENERIC_DESKTOP_HERO.jpg" width="600px"
+                      alt="BMW Car" class="hidden-mobile-hero" />
                   </td>
                 </tr>
               </table>
-
               <table border="0" cellspacing="0" cellpadding="0" width="600"
-                class="100p" bgcolor="#ececec">
+                class="container-table" bgcolor="#ececec">
                 <tr>
                   <td
                     style="padding: 25px 40px 0px; font-size: 24px; font-weight: 100; font-family: Helvetica, Arial, sans-serif;">
@@ -158,19 +222,20 @@
                   </td>
                 </tr>
               </table>
-              <table border="0" cellspacing="0" cellpadding="0" width="600"
-                class="100p" bgcolor="#ececec">
-
+              <table align="center" cellspacing="0" cellpadding="0" width="600"
+                class="container-table" bgcolor="#ececec">
                 <tr>
                   <td
-                    style="padding: 0 40px; line-height: 4.6; font-size: 12px; font-family: Helvetica, Arial, sans-serif;">
+                    style="padding: 0 40px; line-height: 2.6; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"
+                    class="larger-font">
                     Hello [First name]
                   </td>
                 </tr>
 
                 <tr>
                   <td
-                    style="padding: 0 40px; line-height: 1.6; font-size: 12px; font-family: Helvetica, Arial, sans-serif;">
+                    style="padding: 0 40px; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"
+                    class="larger-font">
                     Designed to make a statement nearly anywhere, the new BMW
                     X6 is driving
                     unleashed<br /><br />
@@ -179,20 +244,23 @@
 
                 <tr>
                   <td
-                    style="padding: 0 40px; line-height: 1.6; font-size: 12px; font-family: Helvetica, Arial, sans-serif;">
+                    style="padding: 0 40px; line-height: 1.4; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"
+                    class="larger-font">
                     A
                     redefined
                     muscular
                     exterior. handling the toughest off-road conditions. And
-                    a</br>
+                    a </br>
                     fully-connected Intelligent Personal Assistant to keep up
                     with you
-                    wherever you go. The</br> X6 looks how it feels. Powerful.
+                    wherever you go. The X6 looks how it feels.
+                    Powerful.
                   </td>
                 </tr>
                 <tr>
                   <td
-                    style="padding: 0 40px; line-height: 4.6; font-size: 12px; font-family: Helvetica, Arial, sans-serif;">
+                    style="padding: 0 40px; line-height: 2; font-size: 12px; font-family: Helvetica, Arial, sans-serif;"
+                    class="larger-font">
                     The new BMW X6 is now available to test drive*. Book
                     yours
                     today.
@@ -200,15 +268,15 @@
                 </tr>
               </table>
               <table border="0" cellspacing="0" cellpadding="0" width="600"
-                class="100p" bgcolor="#ececec">
+                class="container-table" bgcolor="#ececec">
                 <tr>
-                  <td style="padding: 40px;">
+                  <td style="padding: 40px;" class="container-td">
                     <table border="0" cellspacing="0" cellpadding="0"
-                      width="520" class="100p" bgcolor="white">
+                      width="520" class="container-table" bgcolor="white">
                       <tr>
-                        <td style="padding: 20px 40px">
+                        <td style="padding: 20px 40px" class="container-td">
                           <table border="0" cellspacing="0" cellpadding="0"
-                            width="420">
+                            width="420" class="container-table">
                             <tr>
                               <td
                                 style="line-height: 3.2; font-weight: 600; font-size: 14px; font-family: Helvetica, Arial, sans-serif;">
@@ -252,180 +320,188 @@
                   </td>
                 </tr>
               </table>
-
-              <table border="0" cellspacing="0" cellpadding="0" width="600"
+              <!-- Start of CTA-->
+              <table border="0" cellpadding="0" cellspacing="0" width="600"
                 class="100p">
-
-                <tr style="height: 23px;">
-                  <td style="width: 50px; height: 30px;">&nbsp;</td>
-                  <td style="width: 215px; height: 30px;">&nbsp;</td>
-                  <td style="width: 70px; height: 30px;">&nbsp;</td>
-                  <td style="width: 215px; height: 30px;">&nbsp;</td>
-                  <td style="width: 50px; height: 30px;">&nbsp;</td>
-                </tr>
-
-
-                <tr style="height: 28px;">
-                  <td style="width: 50px; height: 50px;">&nbsp;</td>
-                  <td
-                    style="width: 215px; background-color: #1c69d4; font-family: Helvetica, Arial, sans-serif; height: 50px; text-align: center;">
-                    <a href="http://bmw.co.uk"
-                      style="color:#FFFFFF; text-decoration:none;">Test
-                      drive</a></td>
-                  <td style="width: 70px; height: 50px;">&nbsp;</td>
-                  <td
-                    style="width: 215px; height: 50px; text-align: center; font-family: Helvetica, Arial, sans-serif; border: white solid 0.1px">
-                    <a href="http://bmw.co.uk"
-                      style="color:#FFFFFF; text-decoration:none;">Find out
-                      more</a></td>
-                  <td style="width: 50px; height: 50px;">&nbsp;</td>
-                </tr>
-
-
-                <tr style="height: 23px;">
-                  <td style="width: 50px; height: 30px;">&nbsp;</td>
-                  <td style="width: 215px; height: 30px;">&nbsp;</td>
-                  <td style="width: 70px; height: 30px;">&nbsp;</td>
-                  <td style="width: 215px; height: 30px;">&nbsp;</td>
-                  <td style="width: 50px; height: 30px;">&nbsp;</td>
-                </tr>
-
-              </table>
-
-
-              <table border="1px white solid" cellspacing="0" cellpadding="0"
-                width="600" class="100p">
                 <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0" width="600"
+                      style="border-left:1px solid #e9e9e9; border-right: 1px solid #e9e9e9;"
+                      id="templateColumns" class="container-table 100p">
+                      <tr>
+                        <td align="center" valign="top"
+                          class="templateColumnContainer">
+                          <table cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td valign="top" class="leftColumnContent"
+                                style="padding-left: 40px; padding-right: 40px; padding-top: 30px; padding-bottom: 30px;">
+                                <table border="0" cellpadding="0"
+                                  cellspacing="0"
+                                  style="color: white; border:solid 1px #1c69d4; height: 100%; width: 100%;">
+                                  <tr>
+                                    <td class="container-td">
+                                      <a href="http://bmw.co.uk" target="_blank"
+                                        style="background-color: #1c69d4; display: block; border-top: 18px solid #1c69d4; border-right: 15px solid #1c69d4; border-bottom: 18px solid #1c69d4;  border-left: 15px solid #1c69d4;text-decoration:none;font-family:Helvetica, Arial, sans-serif;text-align:center;color:#ffffff;line-height:18px;font-size:14px;font-weight:bold; ">
+                                        Book a test drive
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        <td align=" center" valign="top" width="50%"
+                          class="templateColumnContainer">
+                          <table border="0" cellpadding="0" cellspacing="0"
+                            width="100%">
+                            <tr>
+                            </tr>
+                            <td valign="top" class="rightColumnContent"
+                              style="padding-left: 40px; padding-right: 40px; padding-top: 30px; padding-bottom: 30px;">
+                              <table border="10" cellpadding="0" cellspacing="0"
+                                style="height: 100%; width:100%; color: white; border:solid 1px #c9c9c9;">
+                                <tr>
+                                  <td style="background-color: white;">
+                                    <a href="http://bmw.co.uk" target="_blank"
+                                      style="display: block; border-top: 18px solid #262626; border-right: 15px solid #262626; border-bottom: 18px solid #262626;  border-left: 15px solid #262626;text-decoration:none;font-family:Helvetica, Arial, sans-serif;text-align:center;color:#ffffff;line-height:18px;font-size:14px;font-weight:bold; background-color: #262626;">
+                                      Find out more
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <!--- start of footer -->
+              <table width="600" bgcolor="#262626" cellspacing="0"
+                cellpadding="0" style="width:100%; border: 1px solid #c9c9c9">
+                <tr>
+                  <td bgcolor="#262626" align="center"
+                    style="font-size:1px; line-height:1px; padding: 25px 20px 25px 20px;">
+                    <table width="600" border="0" cellspacing="0"
+                      cellpadding="0" class="100p">
+                      <tr>
+                        <td align="center"
+                          style="font-size:1px; line-height:1px; padding: 0 0 14px 0;">
+                          <table align="center" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <tr>
+                              <td align="center"
+                                style="line-height:20px; font-size:14px; font-family: Helvetica, Arial, sans-serif; color:#c9c9c9; font-weight:normal; vertical-align:top; text-align:center; text-transform:uppercase;">
+                                Follow Us:
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" bgcolor="#262626"
+                          style="font-size:1px; line-height:1px;">
+                          <table align="center" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <tr>
+                              <td align="right"
+                                style="font-size:1px; line-height:1px;padding: 0 10px 0 10px;">
+                                <a href="s://www.facebook.com/bmwuk"
+                                  target="_blank" title=""
+                                  style="text-decoration:none;"><img
+                                    src="/images/Facebook.png" alt="Facebook"
+                                    width="40" height="40"
+                                    style="background-color:#262626; display: block; border: none;" /></a>
+                              </td>
+                              <td align="right"
+                                style="font-size:1px; line-height:1px; padding: 0 10px 0 10px;">
+                                <a href="https://www.twitter.com/BMW_UK"
+                                  target="_blank" title=""
+                                  style="text-decoration:none;"><img
+                                    src="/images/Twitter.png" alt="Twitter"
+                                    width="40" height="40"
+                                    style="background-color:#262626; display: block; border: none;" /></a>
+                              </td>
+                              <td align="left"
+                                style="font-size:1px; line-height:1px; padding: 0 10px 0 10px;">
+                                <a href="https://www.youtube.com/user/bmwuk"
+                                  target="_blank" title=""
+                                  style="text-decoration:none;"><img
+                                    src="/images/YOutube.png" alt="YouTube"
+                                    width="40" height="40"
+                                    style="background-color:#262626; display: block; border: none;" /></a>
+                              </td>
+                              <td align="left"
+                                style="font-size:1px; line-height:1px;padding: 0 10px 0 10px;">
+                                <a href="https://www.instagram.com/bmwuk"
+                                  target="_blank" title=""
+                                  style="text-decoration:none;"><img
+                                    src="/images/Insta.png" alt="Instagram"
+                                    width="40" height="40"
+                                    style="background-color:#262626; display: block; border: none;" /></a>
+                              </td>
+                            </tr>
+                          </table>
+                          <table align="center" border="0" cellspacing="0"
+                            cellpadding="0"
+                            style="padding-top: 30px; padding-bottom: 30px;">
+                            <tr>
+                              <td width=" 49%" valign="middle" align="right"
+                                style="line-height:18px; font-size:11px; font-family: Helvetica, Arial, sans-serif; color:#ffffff; font-weight:bold; vertical-align:middle; text-align:right;padding-right:5px;">
+                                <span style="line-height:18px;"><span
+                                    id="view-online"><a href="http://bmw.co.uk"
+                                      target="_blank"
+                                      style="color: #ffffff; text-decoration: none;">View
+                                      in browser</a></span></span>
+                              </td>
+                              <td width="2%" valign="middle" align="center"
+                                style="line-height:18px; font-size:9px; font-family: Helvetica, Arial, sans-serif; color:#888888; font-weight:normal; vertical-align:middle; text-align:center;">
+                                &#160;&#65372;&#160;
+                              </td>
+                              <td width="49%" valign="middle" align="left"
+                                style="line-height:18px; font-size:11px; font-family: Helvetica, Arial, sans-serif; color:#ffffff; font-weight:bold; vertical-align:middle; text-align:left;padding-left:5px;">
+                                <span style="line-height:18px;"><span
+                                    id="unsubscribe"><a href="http://bmw.co.uk"
+                                      target="_blank" title=""
+                                      style="color: #ffffff; text-decoration: none;">Unsubscribe</a></span></span>
+                              </td>
+                            </tr>
+                          </table>
+                          <table style="padding-bottom: 20px; width: 600;"
+                            class="container-table 100p">
+                            <tr>
+                              <td
+                                style="padding-left: 50px; padding-right: 50px; font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #ffff; text-align: center; line-height: 1;">
+                                *Test drive subject to applicant status and
+                                availability.<br />
+                                This email was sent
+                                from an email account of [Retailer registered
+                                name]
+                                which is
+                                a company<br />
+                                registered in [England and Wales / Scotland /
+                                Northern
+                                Ireland] with company
+                                number [xxxxxxx] and <br />has its offices at
+                                [Retailer
+                                registered
+                                address].<br /><br /><br />
+                                If you do not wish to receive further emails
+                                from
+                                [Longest
+                                Possible Retailer’s
+                                Name], please unsubscribe.
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
             </td>
-
-
-
-            <table border="0" cellspacing="0" cellpadding="0" width="600"
-              class="100p" bgcolor="#262626" style="padding-top: 20px;">
-              <tr>
-                <td
-                  style="text-align: center; width:600px; color:#c9c9c9; font-family: Helvetica, Arial, sans-serif; padding-bottom: 20px;">
-                  FOLLOW US:
-                </td>
-              </tr>
-            </table>
-
-            <table border="0" cellspacing="0" cellpadding="0" width="600"
-              class="100p" bgcolor="#262626">
-              <tr>
-                <td style="padding-left: 90px;">
-                  &nbsp;
-                </td>
-
-                <td valign="top" align="center">
-                  <a href="https://en-gb.facebook.com/"><img
-                      src="/images/Facebook.png" alt="facebook logo"
-                      width="45px" height="45px" /></a></td>
-
-                <td valign="top" align="center">
-                  <a href="https://twitter.com/?lang=en-gb/"><img
-                      src="/images/Twitter.png" alt="twitter logo" width="45px"
-                      height="45px" /></a></td>
-
-                <td valign="top" align="center">
-                  <a href="https://www.youtube.com/"><img
-                      src="/images/YOutube.png" alt="youtube logo" width="45px"
-                      height="45px" /></a></td>
-
-                <td valign="top" align="center">
-                  <a href="https://en-gb.facebook.com/"><img
-                      src="/images/Insta.png" alt="instagram logo" width="45px"
-                      height="45px" /></a></td>
-
-                <td style="padding-right: 90px;">
-                  &nbsp;
-                </td>
-              </tr>
-              <tr>
-                <td height="40px">
-                  &nbsp;
-                </td>
-              </tr>
-            </table>
-
-            <table border="0" cellspacing="0" cellpadding="0" width="600"
-              class="100p" bgcolor="#262626">
-              <tr>
-                <td style="padding-left: 205px;">
-                  &nbsp;
-                </td>
-                <td
-                  style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #ffffff">
-                  <a href="https://www.bmw.co.uk/">View in browser</a>
-                </td>
-                <td
-                  style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #ffffff">
-                  |</td>
-                <td
-                  style="font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #ffffff">
-                  <a href="https://www.bmw.co.uk/">&nbsp;
-                    Unsubscribe</a>
-                </td>
-                <td style="padding-right: 205px;">
-                  &nbsp;
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  &nbsp;
-                </td>
-
-              </tr>
-              <tr>
-                <td>
-                  &nbsp;
-                </td>
-
-              </tr>
-            </table>
-
-
-            <table style="padding-bottom: 25px;">
-              <tr>
-                <td
-                  style="padding-left: 50px; padding-right: 50px; font-size: 11px; font-family: Helvetica, Arial, sans-serif; color: #ffff; text-align: center;">
-                  *Test drive subject to applicant status and
-                  availability.<br />
-                  This email was sent
-                  from an email account of [Retailer registered name]
-                  which is
-                  a company<br />
-                  registered in [England and Wales / Scotland / Northern
-                  Ireland] with company
-                  number [xxxxxxx] and <br />has its offices at
-                  [Retailer
-                  registered
-                  address].<br /><br /><br />
-
-                  If you do not wish to receive further emails from
-                  [Longest
-                  Possible Retailer’s
-                  Name], please unsubscribe.
-                </td>
-
-              </tr>
-            </table>
-
-
-
-      </td>
-    </tr>
-  </table>
-
-
-
-
-  </td>
-  </tr>
-  </table>
-  </td>
-  </tr>
-  </table>
+          </tr>
+        </table>
 </body>
 
 </html>

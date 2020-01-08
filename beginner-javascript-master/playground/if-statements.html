@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>If Statements</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+
+
+
+  <h2>Truthy</h2>
+  * 1
+  -10
+  * full string
+  * a string of "0"
+  * empty array
+  * empty object
+
+  <h2>Falsy</h2>
+  * 0
+  * undefined variable
+  * Variable set to null
+  * a variable set to `"hello" - 10` NaN
+  * empty string
+
+  <script>
+    const values = [
+      [],
+      {},
+      -10,
+      1,
+      0,
+      '',
+      'Full string',
+      ' ',
+      undefined,
+      NaN,
+      null,
+    ];
+
+    console.group('truthy or falsy values');
+    values.forEach(value => {
+      if (value) {
+        console.log(value, 'is truthy');
+      } else {
+        console.log(value, 'is falsy');
+      }
+    });
+    console.groupEnd();
+
+    console.clear();
+
+    const count = 1;
+    /*
+    let word;
+    if (count === 1) {
+      word = 'item';
+    } else {
+      word = 'items';
+    }
+*/
+
+    const word = count === 1 ? 'item' : 'items';
+    const sentence = `You have ${count} ${word} in your cart`;
+    console.log(sentence);
+
+    function showAdminBar() {
+      console.log('showing admin bar');
+    }
+    const isAdmin = true;
+    isAdmin ? showAdminBar() : null;
+  </script>
+
+</body>
+
+</html>

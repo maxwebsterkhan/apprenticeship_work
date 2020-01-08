@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>
+
+  </title>
+  <link rel="stylesheet" href="../../base.css">
+</head>
+
+<body>
+  <script>
+    function createRange(start, end) {
+      const range = Array.from({ length: end - start }, function (item, index) {
+        return index;
+      });
+      return range;
+    }
+    console.log(createRange(0, 7));
+  </script>
+</body>
+
+</html>
