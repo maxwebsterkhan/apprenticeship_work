@@ -4,6 +4,7 @@ function Gallery(gallery) {
   }
 
   //Select the elements we need
+
   const images = Array.from(gallery.querySelectorAll('img'));
   const modal = document.querySelector('.modal');
   const prevButton = modal.querySelector('.prev');
@@ -30,6 +31,7 @@ function Gallery(gallery) {
     // TODO: add event listeners for clicks and keyboard
     window.removeEventListener('keyup', handleKeyUp);
     nextButton.removeEventListener('click', showNextImage);
+    prevButton.removeEventListener('click', showPrevImage);
   }
 
   function handleClickOutside(e) {
@@ -39,14 +41,16 @@ function Gallery(gallery) {
   }
 
   function handleKeyUp(e) {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') return closeModal();
+    if (e.key === 'ArrowRight') return showNextImage();
+    if (e.key === 'ArrowLeft') return showPrevImage();
   }
 
   function showNextImage() {
-    showImage(currentImage.nextElementSibling);
+    showImage(currentImage.nextElementSibling || gallery.firstElementChild);
   }
   function showPrevImage() {
-    showImage(currentImage.previousElementSibling);
+    showImage(currentImage.previousElementSibling || gallery.lastElementChild);
   }
 
   function showImage(el) {
@@ -62,14 +66,27 @@ function Gallery(gallery) {
     currentImage = el;
     openModal();
   }
+
   // These are the event listeners
   images.forEach(image =>
     image.addEventListener('click', e => showImage(e.currentTarget))
   );
+
+  // Loop over each image
+  images.forEach(image => {
+    // attached event listener for each image
+    image.addEventListener('keyup', e => {
+      // when key'upped check if it was enter
+      if (e.key === 'Enter') {
+        // if it was, show that image
+        showImage(e.currentTarget);
+      }
+    });
+  });
+
+  // use it on the page
   modal.addEventListener('click', handleClickOutside);
 }
-
-// use it on the page
 
 const gallery1 = Gallery(document.querySelector('.gallery1'));
 const gallery2 = Gallery(document.querySelector('.gallery2'));
