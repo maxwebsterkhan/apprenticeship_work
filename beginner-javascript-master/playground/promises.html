@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Promises</title>
+		<link rel="stylesheet" href="../base.css" />
+	</head>
+	<body>
+		<script>
+			const makePizza = (toppings = []) => {
+				return new Promise(function(resolve, reject) {
+					// reject is people try with pineapple
+					if (toppings.includes('pineapple')) {
+						reject('Seriously!? Get out 🍍');
+					}
+
+					const amountOfTimeToBake = 500 + toppings.length * 200;
+					//wait 1 second for pizza to cook
+					setTimeout(() => {
+						// when ready you can resolve promise
+						resolve(
+							`Here is your pizza 🍕 with the toppings ${toppings.join(' ')}`,
+						);
+					}, amountOfTimeToBake);
+					// if someone went wrong, we can reject this promise
+				});
+			};
+
+			makePizza(['pepperoni'])
+				.then(pizza => {
+					console.log(pizza);
+					return makePizza(['ham', 'cheese']);
+				})
+				.then(pizza => {
+					console.log(pizza);
+					return makePizza(['hot peppers', 'anchovies']);
+				})
+				.then(pizza => {
+					console.log(pizza);
+					return makePizza([
+						'blue cheese',
+						'waffles',
+						'pastrami',
+						'sausage',
+						'feta',
+					]);
+				})
+				.then(pizza => {
+					console.log('All Done! here is your last pizza');
+					console.log(pizza);
+				});
+
+			// Run then concurrently
+
+			const handleError = err => {
+				console.log('Oh nooooooo!!');
+				console.log(err);
+			};
+
+			makePizza(['cheese', 'pineapple'])
+				.then(pizza => {
+					console.log(pizza);
+				})
+				.catch(handleError);
+
+			const p1 = makePizza(['pep']);
+			const p2 = makePizza(['pineapple']);
+
+			const dinnerPromise2 = Promise.allSettled([p1, p2]);
+
+			dinnerPromise2.then(results => {
+				console.log(results);
+			});
+		</script>
+	</body>
+</html>
