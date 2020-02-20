@@ -89,7 +89,6 @@ select {
 [type='reset'],
 [type='submit'],
 button {
-	background-color: skyblue;
 	-webkit-appearance: button;
 }
 [type='button']::-moz-focus-inner,
