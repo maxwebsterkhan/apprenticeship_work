@@ -1,25 +1,9 @@
-import React from 'react';
-import image from './hero.jpg';
-import './App.css';
+import React from 'react'
+import './hero.css';
+import Image from './hero.jpg';
 
-const styles = {
-  hero: {
-    backgroundImage: `url(${image})`
-  }
+const BackgroundImage = () => {
+  return <img className="backgroundImage" src={Image} alt={'Error'} />;
 };
 
-class Hero extends React.Component {s
-  render() {
-    return (
-        <div style={{height:'50vh', width: '100%'}}>
-        <div style={styles.hero}>
-          sdfewfwef
-          </div>
-        </div>
-
-    );
-           }
-
-}
-
-export default Hero
+export default BackgroundImage;

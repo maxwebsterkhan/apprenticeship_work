@@ -1,45 +1,138 @@
 import React from 'react';
-import image from './menu.png';
+import { makeStyles } from '@material-ui/core/styles';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
 
-class NavBar extends React.Component {
-  render() {
-    return (
-      <div style={{ backgroundColor: 'black', color: 'white' }}>
-        <div
-          class="ui secondary pointing menu"
-          style={{ padding: '20px 0 0 40px', fontSize: '15px' }}
-        >
-          <a style={{ backgroundColor: 'black', color: 'white' }} class="item">
-            Nav element 1
-          </a>
-          <a style={{ backgroundColor: 'black', color: 'white' }} class="item">
-            Nav element 2
-          </a>
-          <a style={{ backgroundColor: 'black', color: 'white' }} class="item">
-            Nav element 3
-          </a>
-          <div
-            class="right menu"
-            style={{ fontSize: '15px', padding: '0 40px 0 0' }}
-          >
-            <a
-              style={{
-                backgroundColor: 'black',
-                color: 'white'
-              }}
-              class="ui item"
-            >
-              Contact us
-            </a>
-          </div>
-        </div>
-        <div style={{ backgroundColor: 'black' }} class="ui segment">
-          <p></p>
-        </div>
-      </div>
-    );
+const useStyles = makeStyles({
+  list: {
+    width: 250
+  },
+  fullList: {
+    width: 'auto'
   }
+});
 
+export default function SwipeableTemporaryDrawer() {
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false
+  });
+
+  const toggleDrawer = (side, open) => event => {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+
+    setState({ ...state, [side]: open });
+  };
+
+  const sideList = side => (
+    <div
+      className={classes.list}
+      role="presentation"
+      onClick={toggleDrawer(side, false)}
+      onKeyDown={toggleDrawer(side, false)}
+    >
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
+  const fullList = side => (
+    <div
+      className={classes.fullList}
+      role="presentation"
+      onClick={toggleDrawer(side, false)}
+      onKeyDown={toggleDrawer(side, false)}
+    >
+      <List>
+        {['About us', 'Portfolios', 'Contact'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+
+    </div>
+  );
+
+  return (
+    <div tyle={{ backgroundColor: '#09070c' }}>
+      <Button
+        style={{ color: 'white', backgroundColor: '#09070c' }}
+        onClick={toggleDrawer('top', true)}
+      >
+        Menu
+      </Button>
+
+      <SwipeableDrawer
+        open={state.left}
+        onClose={toggleDrawer('left', false)}
+        onOpen={toggleDrawer('left', true)}
+      >
+        {sideList('left')}
+      </SwipeableDrawer>
+      <SwipeableDrawer
+        anchor="top"
+        open={state.top}
+        onClose={toggleDrawer('top', false)}
+        onOpen={toggleDrawer('top', true)}
+      >
+        {fullList('top')}
+      </SwipeableDrawer>
+      <SwipeableDrawer
+        anchor="bottom"
+        open={state.bottom}
+        onClose={toggleDrawer('bottom', false)}
+        onOpen={toggleDrawer('bottom', true)}
+      >
+        {fullList('bottom')}
+      </SwipeableDrawer>
+      <SwipeableDrawer
+        anchor="right"
+        open={state.right}
+        onClose={toggleDrawer('right', false)}
+        onOpen={toggleDrawer('right', true)}
+      >
+        {sideList('right')}
+      </SwipeableDrawer>
+    </div>
+  );
 }
-
-export default NavBar
