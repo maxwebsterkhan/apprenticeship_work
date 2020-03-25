@@ -6,25 +6,21 @@ import SimpleCard from './Card.js'
 import './app.css';
 
 const maxinfo = {
-  name: 'max',
-  job: 'Front End Dev',
+  name: 'Max',
   about:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo, nesciunt a provident dicta similique eveniet. Vitae, ipsam aliquid placeat odit molestias excepturi unde, ad dolore et labore omnis ratione?'
 }
 const beninfo = {
-  name: 'max',
-  job: 'Front End Dev',
+  name: 'Ben',
   about:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo, nesciunt a provident dicta similique eveniet. Vitae, ipsam aliquid placeat odit molestias excepturi unde, ad dolore et labore omnis ratione?'
 };
 const jackinfo = {
-  name: 'max',
-  job: 'Front End Dev',
+  name: 'Jack',
   about:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo, nesciunt a provident dicta similique eveniet. Vitae, ipsam aliquid placeat odit molestias excepturi unde, ad dolore et labore omnis ratione?'
 };
 const lewisinfo = {
-  name: 'max',
-  job: 'Front End Dev',
+  name: 'Lewis',
   about:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quo, nesciunt a provident dicta similique eveniet. Vitae, ipsam aliquid placeat odit molestias excepturi unde, ad dolore et labore omnis ratione?'
 };

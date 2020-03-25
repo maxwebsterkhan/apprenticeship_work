@@ -72,9 +72,7 @@ export default function CustomizedDialogs(props) {
       >
         <div style={{ width: '200px' }}>
           <h1>{props.name}</h1>
-          <p>
-            {props.info}
-          </p>
+          <p>{props.info}</p>
         </div>
       </button>
       <Dialog
