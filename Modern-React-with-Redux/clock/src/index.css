@@ -1,0 +1,15 @@
+.center {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+}
+.flex {
+  display: flex;
+}
