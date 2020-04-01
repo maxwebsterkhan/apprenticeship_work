@@ -66,7 +66,7 @@ export default function CustomizedDialogs(props) {
   return (
     <div>
       <button
-        style={{ backgroundColor: 'white', color: 'black' }}
+        style={{ backgroundColor: 'black', color: 'white' }}
         variant="outlined"
         onClick={handleClickOpen}
       >
