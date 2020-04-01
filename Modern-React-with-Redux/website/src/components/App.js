@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import FullSegment from './FullSegment';
 import SplitSegment from './SplitSegment';
 import TwoSegment from './TwoSegment';
+import TextSegment from './TextSegment';
 
 class App extends React.Component {
   render() {
@@ -17,7 +18,10 @@ class App extends React.Component {
         <div>
           <SplitSegment />
         </div>
-        <TwoSegment />
+        <div>
+          <TwoSegment />
+          <TextSegment />
+        </div>
       </div>
     );
   }
