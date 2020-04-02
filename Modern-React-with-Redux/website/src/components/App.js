@@ -4,6 +4,17 @@ import FullSegment from './FullSegment';
 import SplitSegment from './SplitSegment';
 import TwoSegment from './TwoSegment';
 import TextSegment from './TextSegment';
+import Footer from './Footer';
+
+const info = {
+  location: 'Bristol, UK',
+  email: 'email@email.com',
+  linkedin: 'www.linkedin.com',
+  github: 'www.github.com',
+  lorem:
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nostrum repellat error illum eius officiis cum suscipit accusantium assumenda molestiae est voluptate consectetur, doloribus dolorem quo obcaecati pariatur laudantium voluptates.'
+};
+
 
 class App extends React.Component {
   render() {
@@ -16,12 +27,19 @@ class App extends React.Component {
           </div>
         </div>
         <div>
-          <SplitSegment />
+          <SplitSegment lorem={info.lorem} />
         </div>
         <div>
-          <TwoSegment />
-          <TextSegment />
+          <TwoSegment lorem={info.lorem} />
+          <TextSegment lorem={info.lorem} />
         </div>
+        <Footer
+          location={info.location}
+          email={info.email}
+          linkedin={info.linkedin}
+          github={info.github}
+          lorem={info.lorem}
+        />
       </div>
     );
   }

@@ -1,16 +1,30 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
- const NavBar = () => {
+ class NavBar extends React.Component {
+
+   render() {
 												return (
                           <div>
-                            <div class="ui large secondary pointing menu inverted">
-                              <a className="toc item"><i className="sidebar icon"></i></a>
-                              <a className="active item">Home</a>
-                              <a className="item">Work</a>
-                              <a className="item">Company</a>
+                            <div className="ui large secondary pointing menu inverted scale down">
+                              <i className="toc item">
+                                <i className="sidebar icon"></i>
+                              </i>
+                              <a href="#1" className="active item">
+                                Home
+                              </a>
+                              <a href="#2" className="item">
+                                Work
+                              </a>
+                              <a href="#3" className="item">
+                                Company
+                              </a>
+                              <div className="right item">
+                                <SearchBar />
+                              </div>
                             </div>
                           </div>
                         );
 											}
-
+                    }
 export default NavBar
