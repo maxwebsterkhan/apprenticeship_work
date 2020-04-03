@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-
+// containers nested component as the searchbar and navbar could be used seperately
  class NavBar extends React.Component {
 
    render() {

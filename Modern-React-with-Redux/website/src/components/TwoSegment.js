@@ -5,7 +5,10 @@ class TwoSegment extends React.Component {
    return (
      <div className="ui equal width stackable internally celled grid">
        <div className="ui segment">
-         <div style={{margin:'0 2em 0 2em'}}className="ui two column very relaxed grid">
+         <div
+           style={{ margin: '0 2em 0 2em' }}
+           className="ui two column very relaxed grid"
+         >
            <div className="column">
              <h3>Languages</h3>
              <div
@@ -76,9 +79,7 @@ class TwoSegment extends React.Component {
            </div>
            <div className="column">
              <h3>Experience</h3>
-             <p>
-             {this.props.lorem}
-             </p>
+             <p>{this.props.lorem}</p>
            </div>
          </div>
          <div className="ui vertical divider"></div>

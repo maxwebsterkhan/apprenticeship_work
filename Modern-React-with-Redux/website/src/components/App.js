@@ -5,7 +5,7 @@ import SplitSegment from './SplitSegment';
 import TwoSegment from './TwoSegment';
 import TextSegment from './TextSegment';
 import Footer from './Footer';
-
+// Data object with random data inside
 const info = {
   location: 'Bristol, UK',
   email: 'email@email.com',

@@ -9,9 +9,7 @@ class TextSegment extends React.Component {
           className="ui text container"
         >
           <h3 className="ui header">Final Comments</h3>
-          <p>
-            {this.props.lorem}
-          </p>
+          <p>{this.props.lorem}</p>
         </div>
       </div>
     );
