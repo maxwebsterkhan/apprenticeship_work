@@ -11,18 +11,23 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
     .value(); // Executes chain method.
 };
 
-export const fetchPosts = () => async (dispatch) => {
+export const fetchPosts = () => async dispatch => {
   const response = await jsonPlaceholder.get('/posts'); // API call
 
   dispatch({ type: 'FETCH_POSTS', payload: response.data });
-  // Action creator - This returns a payload (object) with the data recieved from API call for the list of records
+  /* Action creator - This returns a payload (object)
+  with the data recieved from API call for the list of records
+  which is dispatched to our redux store
+  */
 };
 
 export const fetchUser = id => async dispatch => {
   const response = await jsonPlaceholder.get(`/users/${id}`) // API call
 
   dispatch({ type: 'FETCH_USER', payload: response.data });
-  // Action creator - This returns a payload (object) with the data recieved from API call for the list of user IDs
+  /* Action creator - This returns a payload (object)
+   with the data recieved from API call for the list of user IDs
+  which will be dispatched to our redux store */
 };
 
 

@@ -9,15 +9,16 @@ class UserHeader extends Component {
     if (!user) {
       return null;
     }
-    console.log(user);
     return <div className="header">{user.name}</div>;
-
+    // Returns a div which renders the post authors name
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return { user: state.users.find((user) => user.id === ownProps.userId) };
-  // ownProps is a secondary argument to use data from props to retrieve data from Redux store.
+  /* mapStateToProps is a function which is given as a first argument to the connect function
+  ownProps is a secondary argument to use data needed from props to retrieve data from Redux store.
+  */
 }
 
 export default connect(mapStateToProps)(UserHeader);

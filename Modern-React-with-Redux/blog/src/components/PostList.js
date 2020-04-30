@@ -6,12 +6,13 @@ import UserHeader from './userHeader';
 
 class PostList extends Component {
   componentDidMount() {
-    // renders only upon initializion
+    // Lifecycle method which renders only upon initializion
     this.props.fetchPostsAndUsers();
   }
 
   renderList() {
-    // Function to map each object recieved by the posts API call to render onscreen using the props system
+    /* Function to map over each object recieved by the "posts" API call
+    which we render on screen using the props system to specficy which data we require */
     return this.props.posts.map(post => {
       return (
         <div className="item" key={post.id}>
