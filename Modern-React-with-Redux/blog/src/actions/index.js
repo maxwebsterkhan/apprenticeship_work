@@ -6,13 +6,13 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 
   _.chain(getState().posts) // Requests list of posts
     .map('userId') // Maps over Posts
-    .uniq() // Maps over each post
+    .uniq() // Searches for only unique ID's (no multiples as we have multiple posts with the same author)
     .forEach((id) => dispatch(fetchUser(id))) // For each unique ID runs fetchUser function
     .value(); // Executes chain method.
 };
 
 export const fetchPosts = () => async dispatch => {
-  const response = await jsonPlaceholder.get('/posts'); // API call
+  const response = await jsonPlaceholder.get('/posts'); // API call which calls on our endpoint
 
   dispatch({ type: 'FETCH_POSTS', payload: response.data });
   /* Action creator - This returns a payload (object)

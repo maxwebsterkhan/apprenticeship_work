@@ -30,7 +30,7 @@ class PostList extends Component {
   }
   render() {
     return <div className="ui relaxed divided list">{this.renderList()}</div>;
-    //  Calls render list which renders each post on screen.
+    //  Calls the render method which calls render list which shows each post on screen.
   }
 }
 
