@@ -6,7 +6,7 @@ import UserHeader from './userHeader';
 
 class PostList extends Component {
   componentDidMount() {
-    // Lifecycle method which renders only upon initializion
+    // Lifecycle method which renders only upon initializion ONE time.
     this.props.fetchPostsAndUsers();
   }
 
@@ -37,9 +37,10 @@ class PostList extends Component {
 const mapStateToProps = (state) => {
   return { posts: state.posts };
   /*
-  mapStateToProps is a function which is given as a first argument to the connect function
+  mapStateToProps is a function which is given as a first argument to the connect function.
+
   in our case we are assigning the data returned from state.posts to the key of posts
-  which we can use in our component as props.
+  which we can use in our component as a prop.
   */
 };
 
