@@ -1,21 +1,26 @@
 import React from 'react';
 import MainCard from './MainCard';
+import { CardActions } from '@material-ui/core';
 
-const List = ({title}) => {
+
+const List = ({title, cards}) => {
   return (
     <div style={styles.container}>
       <h4>{title}</h4>
-      <MainCard />
+      {cards.map((card) => (
+        <MainCard text={card.text} />
+      ))}
     </div>
   );
 }
 
 const styles = {
   container: {
-    backgroundColor: '#ccc',
+    backgroundColor: '#dfe3e6',
     borderRadius: 3,
     width: 300,
     padding: 6,
+    marginRight: 8,
   },
 };
 
