@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 
 
-const MainCard = ({text}) => {
+const MainCard = ({ text }) => {
   return (
     <Card style={styles.cardContainer}>
       <CardContent>
@@ -12,7 +12,7 @@ const MainCard = ({text}) => {
       </CardContent>
     </Card>
   );
-}
+};
 
 const styles = {
   cardContainer: {

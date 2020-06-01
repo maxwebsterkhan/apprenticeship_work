@@ -1,6 +1,6 @@
 import React from 'react';
 import MainCard from './MainCard';
-import { CardActions } from '@material-ui/core';
+import ActionButton from './ActionButton';
 
 
 const List = ({title, cards}) => {
@@ -8,8 +8,9 @@ const List = ({title, cards}) => {
     <div style={styles.container}>
       <h4>{title}</h4>
       {cards.map((card) => (
-        <MainCard text={card.text} />
+        <MainCard key={card.id} text={card.text} />
       ))}
+      <ActionButton />
     </div>
   );
 }
@@ -21,6 +22,7 @@ const styles = {
     width: 300,
     padding: 6,
     marginRight: 8,
+    height: '100%',
   },
 };
 

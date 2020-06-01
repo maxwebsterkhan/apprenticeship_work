@@ -5,11 +5,13 @@ const initalState = [
     cards: [
       {
         id: 0,
-        text: 'created static list & card',
+        text:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
       },
       {
         id: 1,
-        text: 'we used a material UI to style components',
+        text:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
       },
     ],
   },
@@ -19,15 +21,16 @@ const initalState = [
     cards: [
       {
         id: 0,
-        text: 'created static list & card',
+        text:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
       },
       {
         id: 1,
-        text: 'Rendering multiple cards',
+        text:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
       },
     ],
   },
-
 ];
 
 const listsReducer = (state = initalState, action) => {
