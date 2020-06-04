@@ -5,34 +5,34 @@ let cardID = 4;
 
 const initalState = [
   {
-    title: 'Card 1',
-    id: 0,
+    title: 'To Do',
+    id: `list-${0}`,
     cards: [
       {
-        id: 0,
+        id: `card-${0}`,
         text:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
+          'To do test.',
       },
       {
-        id: 1,
+        id: `card-${1}`,
         text:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
+          'To do test 2',
       },
     ],
   },
   {
-    title: 'Card 2',
-    id: 1,
+    title: 'Doing',
+    id: `list-${1}`,
     cards: [
       {
-        id: 0,
+        id: `card-${2}`,
         text:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
+          'Doing test 1',
       },
       {
-        id: 1,
+        id: `card-${3}`,
         text:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi illum, earum non quisquam nemo voluptatum expedita nostrum consequuntur et tenetur blanditiis enim culpa atque obcaecati omnis tempore vitae iste officiis?',
+          'Doing test 2',
       },
     ],
   },
@@ -44,15 +44,15 @@ const listsReducer = (state = initalState, action) => {
       const newList = {
         title: action.payload,
         cards: [],
-        id: listID,
+        id: `list-${listID}`,
       };
       listID += 1;
       return [...state, newList];
 
-    case CONSTANTS.ADD_CARD:
+    case CONSTANTS.ADD_CARD: {
       const newCard = {
         text: action.payload.text,
-        id: cardID,
+        id: `card-${cardID}`,
       };
       cardID += 1;
 
@@ -66,6 +66,25 @@ const listsReducer = (state = initalState, action) => {
           return list;
         }
       });
+      return newState;
+    }
+
+    case CONSTANTS.DRAG_HAPPENED:
+      const {
+        droppableIdStart,
+        droppableIdEnd,
+        droppableIndexStart,
+        droppableIndexEnd,
+        draggableId,
+      } = action.payload;
+      const newState = [...state];
+
+      // In the same list
+      if (droppableIdStart === droppableIdEnd) {
+        const list = state.find(list => droppableIdStart === list.id);
+        const card = list.cards.splice(droppableIndexStart, 1);
+        list.cards.splice(droppableIndexEnd, 0, ...card);
+      }
       return newState;
 
     default:
