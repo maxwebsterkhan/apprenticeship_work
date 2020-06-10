@@ -13,7 +13,6 @@ const ListContainer = styled.div`
 
 class App extends Component {
   onDragEnd = (result) => {
-
     const { destination, source, draggableId, type } = result;
     if (!destination) {
       return;
@@ -30,11 +29,25 @@ class App extends Component {
     );
   };
 
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: '' };
+  }
+  callAPI() {
+    fetch('http://localhost:9000/testAPI')
+      .then((res) => res.text())
+      .then((res) => this.setState({ apiResponse: res }));
+  }
+  componentDidMount() {
+    this.callAPI();
+  }
+
   render() {
     const { lists } = this.props;
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div className="App">
+          <p className="App-intro">{this.state.apiResponse}</p>
           <h2>Title</h2>
           <Droppable droppableId="all-lists" direction="horizontal" type="list">
             {(provided) => (
