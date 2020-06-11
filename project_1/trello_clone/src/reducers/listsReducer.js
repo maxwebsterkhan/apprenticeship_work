@@ -83,9 +83,6 @@ const listsReducer = (state = initalState, action) => {
         newState.splice(droppableIndexEnd, 0, ...list)
         return newState
       }
-
-
-
       // In the same list
 
       if (droppableIdStart === droppableIdEnd) {
