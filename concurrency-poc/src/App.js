@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { PrimaryButton, SecondaryButton } from 'ngis-application-kit';
 import { Modal, Text } from 'ngis-application-kit';
 
-// const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-function ModalOne({ toggleModal, show }) {
+export const ModalOne = ({ toggleModal, show }) => {
 
   return (
     <Modal title="Modal 1" isOpen={show}>
@@ -29,7 +27,7 @@ function ModalOne({ toggleModal, show }) {
   );
 }
 
-function ModalTwo({ show, toggleModal }) {
+export const ModalTwo = ({ show, toggleModal }) => {
 
    const [ waiting, setWaiting ] = useState(false);
 
@@ -44,7 +42,6 @@ function ModalTwo({ show, toggleModal }) {
      setWaiting(false);
      toggleModal()
    };
-
 
 
   return (
@@ -68,9 +65,8 @@ function ModalTwo({ show, toggleModal }) {
   );
 }
 
-function App(props) {
+export const App = (props) => {
 
-  const { waiting, setWaiting } = useState(false);
   const [show, setShow] = useState(false);
   const [modalType, setModalType] = useState('modalOne');
 
@@ -80,7 +76,7 @@ function App(props) {
   };
 
 
-  var modal=
+ const modal =
     modalType !== 'modalOne' ? (
       <ModalTwo show={show} toggleModal={toggle} />
     ) : (
