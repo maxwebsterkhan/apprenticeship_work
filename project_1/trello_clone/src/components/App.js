@@ -50,7 +50,12 @@ class App extends Component {
         <div className="App">
           <p className="App-intro">{this.state.apiResponse}</p>
           <h2>Title</h2>
-          <Droppable droppableId="all-lists" direction="horizontal" type="list">
+          <Droppable
+            droppab
+            leId="all-lists"
+            direction="horizontal"
+            type="list"
+          >
             {(provided) => (
               <ListContainer
                 {...provided.droppableProps}
