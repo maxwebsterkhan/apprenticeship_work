@@ -1,0 +1,116 @@
+{
+  "name": "ngis-application-kit",
+  "version": "6.7.0+681dae1a",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.cjs.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genomicsengland/ngis-application-kit"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run rollup:build",
+    "lint": "eslint \"src/**/*.js\" --format=pretty",
+    "prettier": "prettier \"src/**\" --write",
+    "rollup:build": "rimraf dist && cross-env rollup --config",
+    "rollup:watch": "npm run rollup:build -- --watch",
+    "storybook:dev": "start-storybook -p 9009",
+    "storybook:build": "build-storybook -s public -o ./.jenkins/docker-deploy/storybook-static",
+    "storybook:netlify": "build-storybook -s public --quiet",
+    "start": "npm run storybook:dev",
+    "test": "jest",
+    "on-commit": "lint-staged",
+    "git-publish": "node ./scripts/git-publish",
+    "new": "node ./scripts/new"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "ie >= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "lodash.get": "4.4.2",
+    "lodash.merge": "4.6.2",
+    "react-hook-form": "4.5.5",
+    "react-markdown": "4.1.0",
+    "react-select": "3.0.8",
+    "tiny-invariant": "1.0.6",
+    "tiny-warning": "1.0.3",
+    "yup": "0.28.1"
+  },
+  "peerDependencies": {
+    "@emotion/core": "10.x",
+    "@reach/router": "1.x",
+    "@testing-library/react": "9.x",
+    "check-types": "10.x",
+    "emotion-theming": "10.x",
+    "jest-emotion": "10.x",
+    "prop-types": "15.x",
+    "react": "16.9.x",
+    "react-dom": "16.9.x",
+    "reset-css": "4.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run on-commit"
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "@zonedigital/eslint-config-react",
+      "plugin:jest/recommended"
+    ],
+    "plugins": [
+      "jest"
+    ],
+    "rules": {
+      "max-len": "off",
+      "operator-linebreak": "off",
+      "import/prefer-default-export": "off",
+      "import/no-default-export": "error",
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      },
+      "polyfills": [
+        "Object.entries",
+        "Object.values",
+        "Promise",
+        "String.startsWith"
+      ]
+    },
+    "globals": {
+      "__DEV__": "readonly",
+      "suppressPropErrors": true,
+      "suppressEmotionError": true,
+      "suppressConsoleErrors": true
+    }
+  }
+}
